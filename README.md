@@ -53,13 +53,33 @@ Program to design a half adder and full adder circuit and verify its truth table
 Developed by: SANJAY A
 RegisterNumber: 25016505
 
+```
+Half-adder:
+
+module hs (a,b,sum,carry);
+input (a,b);
+output (sum,carry);
+xor gl(sum,a,b);
+assign carry = a&b;
+endmodule
+
+Half-subtractor:
+
+module hs (a,b, diff, borrow);
+input (a,b);
+output (diff, borrow);
+xor gl(diff, a,b);
+assign borrow = ~a&b;
+endmodule
+```
+
 **RTL Schematic**
 
 ***Half-adder***
 <img width="1912" height="1017" alt="ha" src="https://github.com/user-attachments/assets/6a9b0a52-2f4c-4de8-b184-7f69d3e80754" />
 
 ***Half-subtractor***
-<img width="1919" height="1019" alt="hs" src="https://github.com/user-attachments/assets/f8918b03-e1ae-4049-9313-198ebd36a7c0" />
+<img width="1919" height="1029" alt="image" src="https://github.com/user-attachments/assets/bf717d10-f11a-4039-90c6-2a625b19b8b1" />
 
 
 **Output/TIMING Waveform**
@@ -69,7 +89,7 @@ RegisterNumber: 25016505
 
 
 ***Half-subtractor***
-<img width="1913" height="1022" alt="ha output" src="https://github.com/user-attachments/assets/58a1ec3a-e75c-411d-a988-dcfb895c2e24" />
+<img width="1920" height="1031" alt="image" src="https://github.com/user-attachments/assets/fc55cbb1-d745-47cb-9ad5-ca36e570d4e5" />
 
 
 **Result:**
