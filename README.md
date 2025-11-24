@@ -56,14 +56,14 @@ RegisterNumber: 25016505
 ```
 Half-adder:
 
-module hs (a,b,sum,carry);
+module ha (a,b,sum,carry);
 input (a,b);
 output (sum,carry);
 xor gl(sum,a,b);
 assign carry = a&b;
 endmodule
 
-Half-subtractor:
+Half-subtractor
 
 module hs (a,b, diff, borrow);
 input (a,b);
